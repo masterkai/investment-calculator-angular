@@ -9,7 +9,7 @@ import { UserInputDATA } from './user-input/user-input.model';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  calculateInvestmentResults(data: UserInputDATA) {
+  onCalculateInvestmentResults(data: UserInputDATA) {
     const { initialInvestment, annualInvestment, expectedReturn, duration } =
       data;
 
@@ -32,6 +32,7 @@ export class AppComponent {
       });
     }
 
-    return annualData;
+    // return annualData;
+    console.log(annualData);
   }
 }
