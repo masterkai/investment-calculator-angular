@@ -1,0 +1,29 @@
+@if (results().length!==0) {
+  <table>
+    <thead>
+    <tr>
+      <th>Year</th>
+      <th>Investment Value</th>
+      <th>Interest (Year)</th>
+      <th>Total Interest</th>
+      <th>Invested Capital</th>
+    </tr>
+    </thead>
+    <tbody>
+      @for (r of results(); track r.year ) {
+        <tr>
+          <td>{{r.year}}</td>
+          <td>{{r.annualInvestment}}</td>
+          <td>{{r.interest}}</td>
+          <td>{{r.totalInterest}}</td>
+          <td>{{r.totalAmountInvested}}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+} @else {
+  <p class="center">Please enter some values and press "Calculate"!</p>
+}
+
+
+
