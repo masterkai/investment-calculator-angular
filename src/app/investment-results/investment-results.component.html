@@ -13,10 +13,10 @@
       @for (r of results(); track r.year ) {
         <tr>
           <td>{{r.year}}</td>
-          <td>{{r.annualInvestment}}</td>
-          <td>{{r.interest}}</td>
-          <td>{{r.totalInterest}}</td>
-          <td>{{r.totalAmountInvested}}</td>
+          <td>{{ r.annualInvestment | currency }}</td>
+          <td>{{ r.interest| currency }}</td>
+          <td>{{ r.totalInterest| currency }}</td>
+          <td>{{ r.totalAmountInvested| currency }}</td>
         </tr>
       }
     </tbody>
